@@ -29,24 +29,24 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <a href="{% url 'core:main' %}">
-            <button class="navbar-toggler" type="button" style="border: none; outline: none;">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            </a>
+        <button class="navbar-toggler" type="button" style="border: none; outline: none; color: white;">
+          <img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" alt="">
+        </button>
+        </a>
         <a class="navbar-brand" href="{% url 'core:main' %}"><img src="{% static '/img/coffeemoodlogo.svg' %}" style="width: 143.97px;" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            RU
+        <button style="color: white; border-color: white;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            EN
           </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" style="align-items: end;">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'core:category-az' %}">AZ</a>
+                  <a style="color: white;" class="nav-link" href="{% url 'core:category-az' %}">AZ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'core:category-en' %}">EN</a>
+                  <a style="color: white;" class="nav-link" href="{% url 'core:category-en' %}">EN</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'core:category-ru' %}">RU</a>
+                  <a style="color: white;" class="nav-link" href="{% url 'core:category-ru' %}">RU</a>
                 </li>
               </ul>
         </div>

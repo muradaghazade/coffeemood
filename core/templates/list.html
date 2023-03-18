@@ -86,7 +86,7 @@
         <div class="buttons" style="display: flex; overflow-y: scroll;">
             {% for category in categories %}
             <a href="{% url 'core:products-en' %}?category={{category.en_title}}">
-                <button style="border: none; border-radius: 6px; padding: 10px 16px; background-color: #4A5A56; color: white; font-size: 14px; width: 114px; margin-left: 5px;">{{category.en_title}}</button>
+                <button style="border: 1px solid #3D514E; border-radius: 6px; padding: 10px 16px; background-color: #F3D7B5; color: 3D514E; font-size: 14px; width: 114px; margin-left: 5px;">{{category.en_title}}</button>
             </a>
             {% endfor %}
         </div>
