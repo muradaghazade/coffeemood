@@ -1,0 +1,47 @@
+version: "3.3"
+   
+services:
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        restart: "always"
+        ports:
+            - "80:80"
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./nginx/vhost/:/etc/nginx/vhost.d:ro
+            - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
+            - ./static/:/innovation/static 
+            - ./media/:/innovation/media 
+    django:
+        build: .
+        restart: "always"
+        container_name: django
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/usr/src/app/
+            - ./static/:/code/static
+            - ./media/:/code/media
+        ports:
+            - "8000:8000"
+        environment:
+            - DEBUG=1
+            - DJANGO_ALLOWED_HOSTS=coffeemood.az 34.125.73.229 [::1]
+        depends_on:
+            - pgdb
+        env_file: ./.env
+    pgdb:
+        container_name: pgdb
+        image: postgres
+        ports: 
+            - 5432:5432
+        volumes: 
+            - ./postgre_db:/var/lib/postgresql/data
+        env_file: ./.env
+        
+# volumes:
+#     pgdata:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

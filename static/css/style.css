@@ -1,0 +1,8 @@
+@font-face {
+    font-family: simpleFont;
+    src: url('../fonts/PlayfairDisplay-Medium.ttf');
+  }
+
+body {
+    font-family: simpleFont;
+}
