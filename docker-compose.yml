@@ -25,7 +25,7 @@ services:
             - "8000:8000"
         environment:
             - DEBUG=1
-            - DJANGO_ALLOWED_HOSTS=coffeemood.az 34.125.163.165 [::1]
+            - DJANGO_ALLOWED_HOSTS=coffeemood.az www.coffeemood.az 34.125.163.165 [::1]
         depends_on:
             - pgdb
         env_file: ./.env

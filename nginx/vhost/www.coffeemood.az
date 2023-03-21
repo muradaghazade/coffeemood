@@ -1,0 +1,6 @@
+location /static/ {
+    alias /coffeemood/static/;
+}
+location /media/ {
+    alias /coffeemood/media/;
+}

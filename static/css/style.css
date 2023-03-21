@@ -5,4 +5,5 @@
 
 body {
     font-family: simpleFont;
+    min-height: 1000px;
 }

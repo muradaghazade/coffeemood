@@ -16,6 +16,7 @@
 
     body {
         font-family: simpleFont;
+        min-height: 1000px;
     }
         .logo-container {
             position: relative;
@@ -77,7 +78,7 @@
     <div class="logo-container" style="text-align: center; padding: 35px 36% 0px 50px;z-index: 1;display: flex; justify-content: space-around;">
         <a href="{% url 'core:category-en' %}"><img src="{% static '/img/arrow.svg' %}" alt=""></a>
         <div>
-            <h1 style="font-size: 18px; color: #333333; text-transform: uppercase;">{{request.GET.category}}</h1>
+            <h1 style="font-size: 18px; color: #333333; text-transform: uppercase; margin-left: 100px;">{{request.GET.category}}</h1>
 
         </div>
     </div>
@@ -86,7 +87,7 @@
         <div class="buttons" style="display: flex; overflow-y: scroll;">
             {% for category in categories %}
             <a href="{% url 'core:products-en' %}?category={{category.en_title}}">
-                <button style="border: 1px solid #3D514E; border-radius: 6px; padding: 10px 16px; background-color: #F3D7B5; color: 3D514E; font-size: 14px; width: 114px; margin-left: 5px;">{{category.en_title}}</button>
+                <button style="border: 1px solid #3D514E; border-radius: 6px; padding: 10px 16px; background-color: #F3D7B5; color: #3D514E; min-width: 150px; font-size: 14px; margin-left: 5px;">{{category.en_title}}</button>
             </a>
             {% endfor %}
         </div>
@@ -98,10 +99,10 @@
                 <div id="myOverlay{{product.id}}" class="overlay" style="z-index: 10;">
                     <span class="closebtn" onclick="closeSearch{{product.id}}()" title="Close Overlay">×</span>
                     <div class="overlay-content">
-                      <div style="height: 348px; background: url({{product.image.url}}); background-size: cover; border-radius: 12px;">
-            
+                      <div style="height: 348px; background: url({{product.image.url}}); background-size: contain; background-repeat: no-repeat; border-radius: 12px;">
+                        <img src="{{product.image.url}}" style="visibility: hidden;" />
                       </div>
-                      <div style="height: 203px; background-color: #F3D7B5; padding: 15px; margin-top: 5px; border-radius: 12px;">
+                      <div style=" background-color: #F3D7B5; padding: 15px; margin-top: 5px; border-radius: 12px;">
                         <div style="display: flex; text-align: left; justify-content: space-between; margin-bottom: 35px;">
                             <div>
                                 <h2 style="font-size: 22px;">{{product.en_title}}</h2>
