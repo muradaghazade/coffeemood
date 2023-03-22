@@ -62,8 +62,8 @@
                 {% for category in categories %}
                 <div class="col-6" style="margin-bottom: 10px; text-align: -webkit-center; padding: 0;">
                     <a href="{% url 'core:products-az' %}?category={{category.az_title}}">
-                        <div style="width: 180px; display: flex; -webkit-align-items: flex-end; padding-left: 14px; padding-bottom: 15px; height: 180px; background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000cc 82.81%), url({{category.image.url}}); background-size: cover; border-radius: 12px;">
-                            <span href="" style="font-size: 18px; color: white;">{{category.az_title}}</span>
+                        <div style="width: 180px; display: flex; -webkit-align-items: flex-end; padding-left: 14px; padding-bottom: 15px; height: 180px; background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000cc 82.81%), url({{category.image.url}}); background-size: contain; background-repeat: no-repeat; border-radius: 12px;">
+                            <span href="" style="font-size: 17px; color: white;  text-align: start;">{{category.az_title}}</span>
                         </div>
                     </a>
                 </div>
