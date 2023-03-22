@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coffeemood</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static '/css/modal.css' %}">
     <style>
@@ -120,7 +120,7 @@
                     </div>
                   </div>
                 <div class="col-6" style="margin-bottom: 10px; text-align: -webkit-center; padding: 0;">
-                    <div onclick="openSearch{{product.id}}()" style="width: 180px;padding-left: 14px; padding-bottom: 15px; height: 180px; background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000cc 82.81%), url({{product.image.url}}); background-size: cover; border-radius: 12px; position:relative;">
+                    <div onclick="openSearch{{product.id}}()" style="width: 180px;padding-left: 14px; padding-bottom: 15px; height: 180px; background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000cc 82.81%), url({{product.image.url}}); background-size: contain; background-repeat: no-repeat; border-radius: 12px; position:relative;">
                         <div style="text-align: left; position:absolute;
                         bottom:15px;
                         left:14px;">
