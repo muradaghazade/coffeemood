@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.views.generic import DetailView, TemplateView, ListView
 from core.models import Category, Product
 
+class MainTwoView(TemplateView):
+    template_name = "index.html"
+
 class MainPageView(TemplateView):
     template_name = "index.html"
 

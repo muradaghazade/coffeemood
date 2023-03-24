@@ -5,6 +5,7 @@ app_name = 'core'
 
 
 urlpatterns = [
+    path('',MainTwoView.as_view(),name ='main-two'),
     path('menu/',MainPageView.as_view(),name ='main'),
     path('categories/en/',EngCategoriesView.as_view(),name ='category-en'),
     path('categories/ru/',RuCategoriesView.as_view(),name ='category-ru'),
